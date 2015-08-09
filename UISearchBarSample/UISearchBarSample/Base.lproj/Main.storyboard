@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="UISearchBarSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-KQ-4D4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="k3s-7d-aOx"/>
+                                    <constraint firstAttribute="height" constant="44" id="lxQ-5j-vdM"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Iuz-GS-mO9">
+                                <rect key="frame" x="0.0" y="64" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Lqx-my-0Jj"/>
+                                    <constraint firstAttribute="height" constant="556" id="S1F-TA-3hl"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="bEx-Zl-wvG">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bEx-Zl-wvG" id="tZn-0S-6Ln">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="m3j-eA-tEu"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="fW9-5m-b6E"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="e1c-KQ-4D4" secondAttribute="trailing" id="0GJ-Qv-u6Y"/>
+                            <constraint firstItem="e1c-KQ-4D4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3bq-J4-6yg"/>
+                            <constraint firstItem="Iuz-GS-mO9" firstAttribute="top" secondItem="e1c-KQ-4D4" secondAttribute="bottom" id="CmG-mT-1bo"/>
+                            <constraint firstItem="Iuz-GS-mO9" firstAttribute="top" secondItem="e1c-KQ-4D4" secondAttribute="bottom" id="FI1-b6-lFf"/>
+                            <constraint firstAttribute="trailing" secondItem="Iuz-GS-mO9" secondAttribute="trailing" id="OFc-qj-wJD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Iuz-GS-mO9" secondAttribute="bottom" constant="-20" id="d2w-vE-JD2"/>
+                            <constraint firstItem="Iuz-GS-mO9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="dgI-cP-gsq"/>
+                            <constraint firstItem="e1c-KQ-4D4" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="z56-ka-qE3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="e1c-KQ-4D4" id="44V-iL-Zwv"/>
+                        <outlet property="tableView" destination="Iuz-GS-mO9" id="fzC-NW-XDE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
